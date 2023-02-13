@@ -6,53 +6,134 @@ useHead({
   bodyAttrs: { class: ['dark:bg-gray-900'] },
 });
 
-const exercises = [
+const days = [
   [
-    {
-      name: 'Bench Press',
-      repetation: '4x10',
-    },
-    {
-      name: 'Bent Over Dumbbell Reverse Fly',
-      repetation: '4x10',
-    },
+    [
+      {
+        name: 'Bench Press',
+        repetation: '4x10',
+      },
+      {
+        name: 'Bent Over Dumbbell Reverse Fly',
+        repetation: '4x10',
+      },
+    ],
+    [
+      {
+        name: 'Pullovers',
+        repetation: '4x10',
+      },
+      {
+        name: 'Biceps Curls',
+        repetation: '4x10',
+      },
+    ],
+    [
+      {
+        name: 'Seated Cable Rows',
+        repetation: '4x10',
+      },
+      {
+        name: 'Chest Dips (body weight)',
+        repetation: '4x10',
+      },
+    ],
+    [
+      {
+        name: 'Hanging Leg Raise',
+        repetation: '3x15',
+      },
+    ],
   ],
   [
-    {
-      name: 'Pullovers',
-      repetation: '4x10',
-    },
-    {
-      name: 'Biceps Curls',
-      repetation: '4x10',
-    },
+    [
+      {
+        name: 'Barbell Squats',
+        repetation: '4x10',
+      },
+      {
+        name: 'Deadlifts',
+        repetation: '4x10',
+      },
+    ],
+    [
+      {
+        name: 'Walking Lunges',
+        repetation: '4x10 step (each)',
+      },
+      {
+        name: 'Bulgarian Split Squats',
+        repetation: '4x10 (each)',
+      },
+    ],
+    [
+      {
+        name: 'Seated Hamstring Curls',
+        repetation: '4x10',
+      },
+      {
+        name: 'Standing Calf Raises',
+        repetation: '4x10',
+      },
+    ],
+    [
+      {
+        name: 'Plank',
+        repetation: '3x60 sec',
+      },
+    ],
   ],
   [
-    {
-      name: 'Seated Cable Rows',
-      repetation: '4x10',
-    },
-    {
-      name: 'Chest Dips (body weight)',
-      repetation: '4x10',
-    },
-  ],
-  [
-    {
-      name: 'Hanging Leg Raise',
-      repetation: '3x15',
-    },
+    [
+      {
+        name: 'Incline Barbell Press',
+        repetation: '4x10',
+      },
+      {
+        name: 'Dumbbell Fly',
+        repetation: '4x10',
+      },
+    ],
+    [
+      {
+        name: 'Pull Ups',
+        repetation: '4x10 step',
+      },
+      {
+        name: 'Dumbbell Lateral Raise',
+        repetation: '4x10',
+      },
+    ],
+    [
+      {
+        name: 'EZ-bar Skull Crusher',
+        repetation: '4x10',
+      },
+      {
+        name: 'Face Pulls (rope)',
+        repetation: '4x10',
+      },
+    ],
+    [
+      {
+        name: 'Russian Twist',
+        repetation: '3x15',
+      },
+    ],
   ],
 ];
 </script>
 <template>
   <section class="dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+    <div
+      v-for="(exercises, index) in days"
+      class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6"
+    >
       <div class="max-w-screen-md mb-8 lg:mb-16">
         <h2
           class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
         >
-          Day 1
+          Day {{ index + 1 }}
         </h2>
         <p class="text-gray-500 sm:text-xl dark:text-gray-400">Upper Body</p>
       </div>
