@@ -32,11 +32,11 @@ const { logout } = useAuthStore();
     aria-label="Sidebar"
   >
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-      <a href="https://flowbite.com/" class="flex items-center pl-2.5 mb-5">
+      <a href="#" class="flex items-center pl-2.5 mb-5">
         <img
           src="https://flowbite.com/docs/images/logo.svg"
           class="h-6 mr-3 sm:h-7"
-          alt="Flowbite Logo"
+          alt="Sworkout Logo"
         />
         <span
           class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
@@ -145,22 +145,19 @@ const { logout } = useAuthStore();
   </aside>
 
   <main class="p-4 sm:ml-64">
-    <div
-      class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700"
-    >
+    <div class="p-4 pb-20">
       <slot />
     </div>
   </main>
   <footer
-    class="absolute bottom-0 right-0 left-0 z-40 bg-white shadow sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 dark:bg-gray-800"
+    class="fixed bottom-0 right-0 left-0 z-40 bg-white shadow sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 dark:bg-gray-800"
   >
     <p
       class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0"
     >
       &copy; 2019-2022
-      <a href="https://flowbite.com/" class="hover:underline" target="_blank"
-        >Flowbite.com</a
-      >. All rights reserved.
+      <a href="#" class="hover:underline" target="_blank">Sworkout</a>. All
+      rights reserved.
     </p>
     <div class="flex justify-center items-center space-x-1">
       <a

@@ -1,9 +1,6 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: 'full-screen',
-});
 useHead({
-  bodyAttrs: { class: ['dark:bg-gray-900'] },
+  bodyAttrs: { class: ['dark:bg-gray-700'] },
 });
 
 const days = [
@@ -124,7 +121,7 @@ const days = [
 ];
 </script>
 <template>
-  <section class="dark:bg-gray-900">
+  <section class="dark:bg-gray-700">
     <div
       v-for="(exercises, index) in days"
       class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6"
