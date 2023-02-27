@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import {
+  BoltIcon,
+  FireIcon,
+  RocketLaunchIcon,
+  LightBulbIcon,
+} from '@heroicons/vue/24/solid';
+
 useHead({
   bodyAttrs: { class: ['dark:bg-gray-700'] },
 });
@@ -7,7 +14,7 @@ const days = [
   {
     training: [
       {
-        icon: '',
+        icon: RocketLaunchIcon,
         label: 'Compound',
         workout: [
           {
@@ -17,7 +24,7 @@ const days = [
         ],
       },
       {
-        icon: '',
+        icon: BoltIcon,
         label: 'Superset',
         workout: [
           {
@@ -31,7 +38,7 @@ const days = [
         ],
       },
       {
-        icon: '',
+        icon: FireIcon,
         label: 'Compound Set',
         workout: [
           {
@@ -45,7 +52,7 @@ const days = [
         ],
       },
       {
-        icon: '',
+        icon: BoltIcon,
         label: 'Superset',
         workout: [
           {
@@ -59,11 +66,143 @@ const days = [
         ],
       },
       {
-        icon: '',
+        icon: LightBulbIcon,
         label: 'Simple',
         workout: [
           {
             name: 'Hanging Leg Raise',
+            repetition: '3x15',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    training: [
+      {
+        icon: RocketLaunchIcon,
+        label: 'Compound',
+        workout: [
+          {
+            name: 'Deadlift',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: BoltIcon,
+        label: 'Superset',
+        workout: [
+          {
+            name: 'Incline Barbell Press',
+            repetition: '4x10',
+          },
+          {
+            name: 'Dumbbell Shrugs',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: FireIcon,
+        label: 'Compound Set',
+        workout: [
+          {
+            name: 'Pull Ups',
+            repetition: '4x10',
+          },
+          {
+            name: 'Bent Over Dumbbell Reverse Fly',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: BoltIcon,
+        label: 'Superset',
+        workout: [
+          {
+            name: 'Concentration Curls',
+            repetition: '4x10',
+          },
+          {
+            name: 'Single Arm French Press',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: LightBulbIcon,
+        label: 'Simple',
+        workout: [
+          {
+            name: 'Standing Calf Raises',
+            repetition: '3x15',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    training: [
+      {
+        icon: RocketLaunchIcon,
+        label: 'Compound',
+        workout: [
+          {
+            name: 'Barbell Bench Press',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: FireIcon,
+        label: 'Compound Set',
+        workout: [
+          {
+            name: 'Bent Over Rows',
+            repetition: '4x10',
+          },
+          {
+            name: 'Overhead Press',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: BoltIcon,
+        label: 'Superset',
+        workout: [
+          {
+            name: 'EZ-bar Skull Crusher',
+            repetition: '4x10',
+          },
+          {
+            name: 'Chin Ups',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: BoltIcon,
+        label: 'Superset',
+        workout: [
+          {
+            name: 'Bulgarian Split Squats',
+            repetition: '4x10',
+          },
+          {
+            name: 'Farmer Walks',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: LightBulbIcon,
+        label: 'Simple',
+        workout: [
+          {
+            name: 'Russian Twist',
             repetition: '3x15',
           },
         ],
@@ -93,18 +232,11 @@ const days = [
           <div
             class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-lime-100 lg:h-12 lg:w-12 dark:bg-lime-900"
           >
-            <svg
+            <Component
+              :title="set.label"
+              :is="set.icon"
               class="w-5 h-5 text-lime-600 lg:w-6 lg:h-6 dark:text-lime-300"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
+            />
           </div>
           <h4 class="text-sm mb-2 text-gray-500 dark:text-gray-400">
             {{ set.label }}
