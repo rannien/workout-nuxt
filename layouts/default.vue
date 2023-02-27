@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { logout } = useAuthStore();
+const sidebarOpen = ref(false);
 </script>
 
 <template>
@@ -8,6 +9,7 @@ const { logout } = useAuthStore();
     data-drawer-toggle="sidebar-multi-level-sidebar"
     aria-controls="sidebar-multi-level-sidebar"
     type="button"
+    @click="sidebarOpen = true"
     class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
   >
     <span class="sr-only">Open sidebar</span>
@@ -28,7 +30,8 @@ const { logout } = useAuthStore();
 
   <aside
     id="sidebar-multi-level-sidebar"
-    class="fixed top-0 left-0 z-30 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+    class="fixed top-0 left-0 z-30 w-64 h-screen transition-transform sm:translate-x-0"
+    :class="{ '-translate-x-full': !sidebarOpen }"
     aria-label="Sidebar"
   >
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
@@ -144,16 +147,16 @@ const { logout } = useAuthStore();
     </div>
   </aside>
 
-  <main class="p-2 sm:ml-64">
-    <div class="p-0 pb-20 xl:pb-32 max-sm:pb-8">
+  <main class="p-2 sm:ml-64" @click="sidebarOpen = false">
+    <div class="p-0 pb-20 xl:pb-24 max-sm:pb-8">
       <slot />
     </div>
   </main>
   <footer
-    class="max-sm:relative fixed bottom-0 right-0 left-0 z-40 bg-white shadow sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 dark:bg-gray-800"
+    class="max-sm:relative fixed bottom-0 right-0 left-0 z-40 bg-white shadow sm:flex sm:items-center sm:justify-between p-4 sm:p-2 xl:p-4 dark:bg-gray-800"
   >
     <p
-      class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0"
+      class="mb-4 text-xs text-center text-gray-500 dark:text-gray-400 sm:mb-0"
     >
       &copy; 2022-{{ new Date().getFullYear() }}
       <a href="#" class="hover:underline" target="_blank">Sworkout</a>. All
