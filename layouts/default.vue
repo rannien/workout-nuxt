@@ -155,7 +155,7 @@ const { logout } = useAuthStore();
     <p
       class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0"
     >
-      &copy; 2019-2022
+      &copy; 2022-{{ new Date().getFullYear() }}
       <a href="#" class="hover:underline" target="_blank">Sworkout</a>. All
       rights reserved.
     </p>
