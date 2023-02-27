@@ -145,12 +145,12 @@ const { logout } = useAuthStore();
   </aside>
 
   <main class="p-2 sm:ml-64">
-    <div class="p-0 pb-20 sm:p-4">
+    <div class="p-0 pb-20 xl:pb-32 max-sm:pb-8">
       <slot />
     </div>
   </main>
   <footer
-    class="fixed bottom-0 right-0 left-0 z-40 bg-white shadow sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 dark:bg-gray-800"
+    class="max-sm:relative fixed bottom-0 right-0 left-0 z-40 bg-white shadow sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 dark:bg-gray-800"
   >
     <p
       class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0"
