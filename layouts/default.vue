@@ -144,8 +144,8 @@ const { logout } = useAuthStore();
     </div>
   </aside>
 
-  <main class="p-4 sm:ml-64">
-    <div class="p-4 pb-20">
+  <main class="p-2 sm:ml-64">
+    <div class="p-0 pb-20 sm:p-4">
       <slot />
     </div>
   </main>
