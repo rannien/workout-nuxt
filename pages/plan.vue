@@ -215,20 +215,23 @@ const days = [
   <section class="dark:bg-gray-700">
     <div
       v-for="(day, index) in days"
-      class="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6"
+      class="py-6 px-4 mx-auto max-w-screen-2xl sm:py-10 lg:px-6"
     >
-      <div class="max-w-screen-md mb-8 lg:mb-16">
+      <div class="max-w-screen-md mb-4 lg:mb-10">
         <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+          class="mb-2 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
         >
           Day {{ index + 1 }}
         </h2>
         <p class="text-gray-500 sm:text-xl dark:text-gray-400">Full Body</p>
       </div>
       <div
-        class="space-y-8 md:grid md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 md:gap-8 md:space-y-0"
+        class="space-y-6 md:grid md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 md:gap-6 md:space-y-0"
       >
-        <div v-for="set in day.training">
+        <div
+          v-for="set in day.training"
+          class="bg-gray-900 shadow-md p-4 rounded-lg"
+        >
           <div
             class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-lime-100 lg:h-12 lg:w-12 dark:bg-lime-900"
           >
