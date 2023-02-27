@@ -4,57 +4,79 @@ useHead({
 });
 
 const days = [
-  [
-    [
+  {
+    training: [
       {
-        name: 'Barbell Squats',
-        repetation: '4x10',
+        icon: '',
+        label: 'Compound',
+        workout: [
+          {
+            name: 'Barbell Squats',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: '',
+        label: 'Superset',
+        workout: [
+          {
+            name: 'Barbell Curls',
+            repetition: '4x10',
+          },
+          {
+            name: 'Triceps Cable Extension',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: '',
+        label: 'Compound Set',
+        workout: [
+          {
+            name: 'Pullovers',
+            repetition: '4x10',
+          },
+          {
+            name: 'Chest Dips (body weight)',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: '',
+        label: 'Superset',
+        workout: [
+          {
+            name: 'Seated V-Grip Row',
+            repetition: '4x10',
+          },
+          {
+            name: 'Dumbbell Lateral Raise',
+            repetition: '4x10',
+          },
+        ],
+      },
+      {
+        icon: '',
+        label: 'Simple',
+        workout: [
+          {
+            name: 'Hanging Leg Raise',
+            repetition: '3x15',
+          },
+        ],
       },
     ],
-    [
-      {
-        name: 'Barbell Curls',
-        repetation: '4x10',
-      },
-      {
-        name: 'Triceps Cable Extension',
-        repetation: '4x10',
-      },
-    ],
-    [
-      {
-        name: 'Pullovers',
-        repetation: '4x10',
-      },
-      {
-        name: 'Chest Dips (body weight)',
-        repetation: '4x10',
-      },
-    ],
-    [
-      {
-        name: 'Seated V-Grip Row',
-        repetation: '4x10',
-      },
-      {
-        name: 'Dumbbell Lateral Raise',
-        repetation: '4x10',
-      },
-    ],
-    [
-      {
-        name: 'Hanging Leg Raise',
-        repetation: '3x15',
-      },
-    ],
-  ],
+  },
 ];
 </script>
 <template>
   <section class="dark:bg-gray-700">
     <div
-      v-for="(exercises, index) in days"
-      class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6"
+      v-for="(day, index) in days"
+      class="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6"
     >
       <div class="max-w-screen-md mb-8 lg:mb-16">
         <h2
@@ -62,12 +84,12 @@ const days = [
         >
           Day {{ index + 1 }}
         </h2>
-        <p class="text-gray-500 sm:text-xl dark:text-gray-400">Upper Body</p>
+        <p class="text-gray-500 sm:text-xl dark:text-gray-400">Full Body</p>
       </div>
       <div
-        class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:space-y-0"
+        class="space-y-8 md:grid md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 md:gap-8 md:space-y-0"
       >
-        <div v-for="superset in exercises">
+        <div v-for="set in day.training">
           <div
             class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-lime-100 lg:h-12 lg:w-12 dark:bg-lime-900"
           >
@@ -84,12 +106,16 @@ const days = [
               ></path>
             </svg>
           </div>
-          <div v-for="exercise in superset" class="mb-4">
+          <h4 class="text-sm mb-2 text-gray-500 dark:text-gray-400">
+            {{ set.label }}
+          </h4>
+
+          <div v-for="exercise in set.workout" class="mb-4">
             <h3 class="mb-2 text-xl font-bold dark:text-white">
               {{ exercise.name }}
             </h3>
             <p class="text-gray-500 dark:text-gray-400">
-              {{ exercise.repetation }}
+              {{ exercise.repetition }}
             </p>
           </div>
         </div>
