@@ -17,7 +17,7 @@ const days = [
         repetation: '4x10',
       },
       {
-        name: 'Dumbbell Lateral Raise',
+        name: 'Triceps Cable Extension',
         repetation: '4x10',
       },
     ],
@@ -37,7 +37,7 @@ const days = [
         repetation: '4x10',
       },
       {
-        name: 'x',
+        name: 'Dumbbell Lateral Raise',
         repetation: '4x10',
       },
     ],
