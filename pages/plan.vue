@@ -230,7 +230,7 @@ const days = [
       >
         <div
           v-for="set in day.training"
-          class="bg-gray-900 shadow-md p-4 rounded-lg"
+          class="dark:bg-gray-900 shadow-md p-4 rounded-lg"
         >
           <div
             class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-lime-100 lg:h-12 lg:w-12 dark:bg-lime-900"
