@@ -4,4 +4,8 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['./stores'],
   },
+  runtimeConfig: {
+    apiSecret: '123',
+    strapiBaseUrl: 'http://localhost:1337',
+  },
 });
